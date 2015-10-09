@@ -1,7 +1,24 @@
 package HW2;
 
-public class MinMax {
-    private double n;
+public class MinMax extends Main {
+
+    public void CalcMN (){
+        int y = x;
+        int min=1;
+        int max=1;
+        int z;
+        while (y!=0) {
+            z=y%10;
+            y/=10;
+            if(z>max) max=z;
+            if(z<min) min=z;
+        }
+        System.out.println("max= "+max+" min= "+min);
+    }
+
+
+}
+   /* private double n;
 
     public double getN() {
         return n;
@@ -34,4 +51,5 @@ public class MinMax {
         }
         System.out.println("Мин "+min + " Макс " + max);
     }
-}
+}*/
+
