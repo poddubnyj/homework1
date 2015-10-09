@@ -17,5 +17,10 @@ public class exec {
         M.setN(input);
         M.Calc();
         M.CalcMN();
+
+        PlusMinus O = new PlusMinus();
+        O.setN(input);
+        O.Calc();
+        O.CalcPM();
     }
 }
