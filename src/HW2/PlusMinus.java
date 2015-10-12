@@ -10,7 +10,7 @@ public class PlusMinus extends Main{
        // for (int d : dig)
       //  System.out.println(d);
 
-        int z = 0;
+        int z = dig[0];
         for (int i = 1; i < Digits; i++) {
 
             if (i % 2 == 0)
@@ -19,7 +19,7 @@ public class PlusMinus extends Main{
                 z = z + dig[i];
 
         }
-        System.out.println(z+dig[0]);
+        System.out.println(z);
 
     }
 }
