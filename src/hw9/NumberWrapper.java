@@ -38,16 +38,53 @@ public class NumberWrapper {
 
     }
 
-    public void setValue(Integer[] i) {
-
-
-
-
+    public int max(){
+        int max = arr[0];
+        for (int i=0; i<arr.length; i++){
+            if (arr[i]>max){
+                max=arr[i];
+            }
+        }
+        return max;
     }
-/*    public Integer get(int pos) {
-        ...
+
+    public int min(){
+        int min = arr[0];
+        for (int i=0; i<arr.length; i++){
+            if (arr[i]<min){
+                min=arr[i];
+            }
+        }
+        return min;
     }
-    ....*/
+
+    public int avg() {
+        int avg = 1;
+        for (int i = 0; i < arr.length; i++) {
+            avg = avg+arr[i];
+        }
+        avg=avg/arr.length;
+        return avg;
+    }
+
+    public void removeValue(Integer value){
+        int count=0;
+        for (int i=0; i<arr.length; i++){
+            if (arr[i]==value){
+                count++;
+            }
+        }
+        Integer tmparr[] = new Integer[arr.length-count];
+
+        for (int i=0, j=0; i<arr.length; i++){
+            if (arr[i]!=value){
+                tmparr[j]=arr[i];
+                j++;
+            }
+        }
+        arr=tmparr;
+    }
+
 }
 
 

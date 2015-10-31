@@ -27,5 +27,19 @@ public class main {
 
         for (int x : arr)
             System.out.print(x + "\t");
+
+
+        System.out.println();
+        System.out.println(w.max());
+        System.out.println(w.min());
+        System.out.println(w.avg());
+
+
+        w.removeValue(2);
+        arr=w.getArr();
+
+        for (int x : arr)
+            System.out.print(x + "\t");
+
     }
 }
