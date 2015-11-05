@@ -1,17 +1,13 @@
 package hw7;
 
-import java.lang.reflect.Array;
+
 import java.util.Random;
 
 /**
  * Created by Poddubniy on 30.10.2015.
  */
 
-/*
-   Для проверки остаточных знаний учеников после летних каникул, учитель младших классов решил начинать каждый урок с того, чтобы задавать каждому ученику пример из таблицы умножения,
-но в классе 15 человек, а примеры среди них не должны повторяться. В помощь учителю напишите программу, которая будет выводить на экран 15 случайных примеров из таблицы умножения
-(от 2*2 до 9*9, потому что задания по умножению на 1 и на 10 — слишком просты). При этом среди 15 примеров не должно быть повторяющихся (примеры 2*3 и 3*2 и им подобные пары считать повторяющимися).
-*/
+
 public class addtask2_1 {
 
 
@@ -74,7 +70,7 @@ public class addtask2_1 {
 
         Random r = new Random();
 
-        int i, j,p;
+        int i, j;
         int count = 0;
 
         while (count < 15) {
@@ -82,26 +78,23 @@ public class addtask2_1 {
                 for (j = 2; j <= i; j++) {
                     if (count >=15) break;
                     if (r.nextBoolean()) {
-                        check(i,j);
+                        checknprint(i,j);
 
                         count++;
 
                     }
-
-
                 }
             }
-
         }
     }
 
-    public static void check(int i, int j){
+    public static void checknprint(int i, int j){
         int [] prod = new int[15];
         boolean c=false;
 
         for (int q =0; q<15;q++){
             if(prod[q]!=i*j){
-                c = true;
+                c=true;
             }
             else{
                 c=false;
