@@ -13,6 +13,9 @@ import java.util.Random;
 (от 2*2 до 9*9, потому что задания по умножению на 1 и на 10 — слишком просты). При этом среди 15 примеров не должно быть повторяющихся (примеры 2*3 и 3*2 и им подобные пары считать повторяющимися).
 */
 public class addtask2_1 {
+
+
+
     public static void main(String[] args) {
 //        int[][] arr = {{2,2},{3,3},{4,4},{5,5},{6,6},{7,7},{8,8},{9,9},{2,2},{2,3},{3,2},{4,5},{5,6},{4,7},{5,4}};//new int[15][2];
 //        for (int i = 0; i < arr.length; i++) {
@@ -43,7 +46,7 @@ public class addtask2_1 {
 //            System.out.println();
 //            }
 
-        int[][] arr = new int[8][];
+//        int[][] arr = new int[8][];
 
 //        for (int i=0; i<8;i++){
 //
@@ -57,28 +60,30 @@ public class addtask2_1 {
 //            System.out.println();
 //        }
 
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j <= i; j++) {
-                arr[i] = new int[j + 1];
-                arr[i][j] = (i + 2) * (j + 2);
-
-                System.out.print(arr[i][j] + "\t");
-            }
-            System.out.println();
-        }
-        System.out.println("---------------------------------");
+//        for (int i = 0; i < 8; i++) {
+//            for (int j = 0; j <= i; j++) {
+//                arr[i] = new int[j + 1];
+//                arr[i][j] = (i + 2) * (j + 2);
+//
+//                System.out.print(arr[i][j] + "\t");
+//            }
+//            System.out.println();
+//        }
+//        System.out.println("---------------------------------");
 
 
         Random r = new Random();
 
-        int i, j;
+        int i, j,p;
         int count = 0;
+
         while (count < 15) {
             for (i = 2; i < 10; i++) {
                 for (j = 2; j <= i; j++) {
                     if (count >=15) break;
                     if (r.nextBoolean()) {
-                        System.out.print(i + "*" + j + "\t");
+                        check(i,j);
+
                         count++;
 
                     }
@@ -90,12 +95,28 @@ public class addtask2_1 {
         }
     }
 
+    public static void check(int i, int j){
+        int [] prod = new int[15];
+        boolean c=false;
 
-
-
-
-
-
+        for (int q =0; q<15;q++){
+            if(prod[q]!=i*j){
+                c = true;
+            }
+            else{
+                c=false;
+            }
+        }
+        if(c){
+            Random r = new Random();
+            if (r.nextBoolean()) {
+                System.out.print(i + "*" + j + "\t");
+            }
+            else {
+                System.out.print(j + "*" + i + "\t");
+            }
+        }
+    }
 }
 
 
