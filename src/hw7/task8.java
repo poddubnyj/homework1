@@ -5,25 +5,26 @@ package hw7;
  */
 public class task8 {
     public static void main(String[] args) {
-        int x=0;
+
+        int  HOW_MUCH = 99999999;
+        long  START = 98989898989989898l;
         long start = System.currentTimeMillis();
-        for (int i = 0; i<1000000; i++) {
-            x = 123456789 << 1;
+        for (int i = 0; i<HOW_MUCH; i++) {
+            long x = START * 2;
         }
-        long end = System.currentTimeMillis();
+        System.out.println("Took ms: " + (System.currentTimeMillis() - start));
 
-        System.out.println("Took ms: " + (end - start));
 
-        int y=0;
-        long start2 = System.currentTimeMillis();
-        for (int i = 0; i<1000000; i++) {
-            y = 123456789 * 2;
+
+        start = System.currentTimeMillis();
+        for (int i = 0; i<HOW_MUCH; i++) {
+            long x = START << 1;
         }
-        long end2 = System.currentTimeMillis();
 
-        System.out.println("Took ms: " + (end2 - start2));
 
-        System.out.println(x+" "+y);
+        System.out.println("Took ms: " + (System.currentTimeMillis() - start));
+
+       // System.out.println(x+" "+y);
 
     }
 }
