@@ -6,7 +6,7 @@ import java.util.Random;
 /**
  * Created by user on 07.11.2015.
  */
-public class addtask4 {
+public class addtask5 {
     public static void main(String[] args) {
 
         Random r = new Random();
