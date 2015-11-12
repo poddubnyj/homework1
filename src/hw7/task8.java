@@ -7,24 +7,34 @@ public class task8 {
     public static void main(String[] args) {
 
         int  HOW_MUCH = 99999999;
-        long  START = 98989898989989898l;
-        long start = System.currentTimeMillis();
+        long  x = 98989898989989898l;
+        long z = 0;
+        long s=0;
+
         for (int i = 0; i<HOW_MUCH; i++) {
-            long x = START * 2;
+            long start = System.currentTimeMillis();
+            long y = x * 2;
+            long stop = System.currentTimeMillis();
+            z = z + (stop-start);
+
+
         }
-        System.out.println("Took ms: " + (System.currentTimeMillis() - start));
+        System.out.println("Took ms: " + z);
 
 
-
-        start = System.currentTimeMillis();
         for (int i = 0; i<HOW_MUCH; i++) {
-            long x = START << 1;
+            long start = System.currentTimeMillis();
+            long y = x << 1;
+            long stop = System.currentTimeMillis();
+            s = s + (stop-start);
+
+
         }
+        System.out.println("Took ms: " + s);
 
 
-        System.out.println("Took ms: " + (System.currentTimeMillis() - start));
 
-       // System.out.println(x+" "+y);
+
 
     }
 }
